@@ -312,3 +312,12 @@
 .logo{
 position: relative;
 }
+
+.logoTxt{
+width: 100%;
+}
+
+.txtCol{
+  color: var(--red);
+  font-weight: 500;
+}
