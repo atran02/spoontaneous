@@ -23,20 +23,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <main className={overpass.className}>
-        <NavBar/>
+        {/* <NavBar/> */}
     
           <div className={styles.mainHome}>
             <div className={styles.divTrans}>
               <div className={styles.divOpaque}>
                 <Image className={styles.logoTxt} src='/assets/logoText.svg' width={371.5} height={53}/>
-                <div>
-                  <Image className={styles.emoji} src='/assets/womanCookEmoji.png' width={28} height={28}/>
-                  <Image className={styles.emoji} src='/assets/manCookEmoji.png' width={28} height={28}/>
-                  <p>
+                <div className={styles.opaqueCont}>
+                  <div className={styles.emojiMain}>
+                    <Image className={styles.emoji} src='/assets/manCookEmoji.png' width={28} height={28}/>
+                    <Image className={styles.emoji} src='/assets/womanCookEmoji.png' width={28} height={28}/>
+                  </div>
+                  <p className={styles.mainTxt}>
                     <span className={styles.txtCol}>Make every meal a surprise.</span>
+                    <br/>
                     Get started by clicking the button or one of the 
                     randomly generated images for your next meal!
                   </p>
+                  <Button text={'Give Me A Recipe'}/>
                 </div>
               </div>
             </div>

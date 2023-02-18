@@ -280,7 +280,7 @@
 .mainHome {
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 6rem;
   min-height: 100vh;
@@ -320,4 +320,66 @@ width: 100%;
 .txtCol{
   color: var(--red);
   font-weight: 500;
+}
+
+.divOpaque{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  background-color: var(--white-light);
+  width: 35em;
+  height: 30em;
+}
+
+.divTrans{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--white-light);
+  width: 40em;
+  height: 35em;
+}
+
+.emojiMain{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 1em;
+}
+
+.mainTxt{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  padding-left: 2em;
+  padding-right: 2em;
+}
+
+.mainButton{
+  background: var(--blue-light);
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 11em;
+  margin: 1em;
+}
+
+.mainButton:hover{
+  background: var(--blue);
+  color: var(--background-end-rgb);
+
+}
+
+.opaqueCont{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
 }
