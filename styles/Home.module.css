@@ -288,6 +288,15 @@
   background-size: cover;
   background-repeat: no-repeat;
 }
+.mainRecipe {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: auto;
+  padding: 3em;
+  min-height: 100vh;
+}
 
 .nav{
   background-color: var(--background-end-rgb);
@@ -307,6 +316,7 @@
   align-items: center;
   justify-content: center;
   color: #ffffff;
+  bottom: 0;
 }
 
 .logo{
@@ -369,6 +379,7 @@ width: 100%;
   text-align: center;
   width: 11em;
   margin: 1em;
+  cursor: pointer;
 }
 
 .mainButton:hover{
@@ -382,4 +393,31 @@ width: 100%;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+}
+
+.recCard{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+}
+.recCont{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 0.5px solid var(--box);
+  padding: 3em;
+  box-shadow: 0px 4px 26px var(--shadow);
+  border-top: 1em solid var(--blue);
+  min-width: 350px;
+  gap: 1em;
+}
+
+.ingSec{
+  display: flex;
+  flex-direction: column;
+  padding: 1em;
+  gap: 1em;
+  border: 3px dashed var(--canvas);
+  width: fit-content;
 }

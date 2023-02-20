@@ -9,11 +9,10 @@ export default function Footer()
       target="_blank"
     >
       {/* © */}
-      Made By {' '}
+      Made By Angelyne {' '}
       <span className={styles.logo}>
         <Image src="/assets/womanCookEmoji.png" alt="AngelyneTran" width={28} height={28} />
       </span>
-      Angelyne
     </a>
   </div>
     
