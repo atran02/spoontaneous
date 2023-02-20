@@ -24,9 +24,10 @@ export default function Recipe() {
   const [recipe, setRecipe] = useState({});
   
   useEffect(()=>{
-    let recipeNum = foods[Math.floor(Math.random(foods.length - 1))];
+    let recipeNum = foods[Math.floor(Math.random()*foods.length - 1)];
     setRecipe(recipeNum);
-  })
+    recipeNum.recipeInstruct = recipeNum.Instructions.split("\n")
+  },[])
   return (
     <>
       <Head>
@@ -40,12 +41,16 @@ export default function Recipe() {
         <NavBar/>
 
         <div className={styles.mainRecipe}>
+              <Button text={'NEW RECIPE'} link={'/recipe'}/>
             <div>
               <RecipeCard foodImg={`/Food Images/${recipe.Image_Name}.jpg`} 
                 heading={recipe.Title}
                 ingredients={recipe.Cleaned_Ingredients}
-                instructions={recipe.Instructions}
+                instructions={recipe.recipeInstruct}
                 />
+                {/* {
+                  recipe.recipeInstruct && recipe.recipeInstruct.map(())
+                } */}
           </div>
         </div>
 

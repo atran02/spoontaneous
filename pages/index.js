@@ -7,6 +7,7 @@ import foods from '../data/food_data'
 import NavBar from '@/comps/nav'
 import Footer from '@/comps/footer'
 import Button from '@/comps/button'
+import { useEffect, useState } from 'react'
 
 const overpass = Overpass({ 
   subsets: ['latin'],
@@ -14,6 +15,12 @@ const overpass = Overpass({
 })
 
 export default function Home() {
+  const [emote, setEmote] = useState();
+
+  useEffect(()=>{
+
+  },[])
+
   return (
     <>
       <Head>
@@ -33,8 +40,21 @@ export default function Home() {
                 
                 <div className={styles.opaqueCont}>
                   <div className={styles.emojiMain}>
-                    <Image className={styles.emoji} src='/assets/manCookEmoji.png' width={28} height={28}/>
-                    <Image className={styles.emoji} src='/assets/womanCookEmoji.png' width={28} height={28}/>
+                    <div>
+                      <Image className={styles.emoji} src='/assets/manCookEmoji.png' width={28} height={28} onClick={()=>{
+                        setEmote(1)
+                      }}/>
+                        {
+                          emote && <Image
+                            src={`/assets/${emote}.png`}
+                            width={28}
+                            height={28}
+                          />
+                        }
+                      <Image className={styles.emoji} src='/assets/womanCookEmoji.png' width={28} height={28} onClick={()=>{
+                        setEmote(2)
+                      }}/>
+                    </div>
                   </div>
                   <p className={styles.mainTxt}>
                     <span className={styles.txtCol}>Make every meal a surprise.</span>

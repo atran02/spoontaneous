@@ -359,6 +359,12 @@ width: 100%;
   padding: 1em;
 }
 
+.emoji{
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+  cursor: pointer;
+}
+
 .mainTxt{
   display: flex;
   justify-content: center;

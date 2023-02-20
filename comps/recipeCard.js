@@ -1,5 +1,6 @@
 import styles from '../styles/Home.module.css'
 import Image from 'next/image'
+import { useState } from 'react'
 
 export default function RecipeCard(
     {
@@ -9,6 +10,8 @@ export default function RecipeCard(
         instructions
     }
 ){
+    // const [ingItem, setIngItem] = useState(Array = ingItem);
+
     return <div className={styles.recCard}>
         <div className={styles.recCont}>
              <h1>{heading}</h1>
@@ -16,14 +19,30 @@ export default function RecipeCard(
              <div className={styles.ingSec}>
                 <h2>INGREDIENTS</h2>
                 <ul>
-                    <li>{ingredients}</li>
+                        {/* {
+                            ingredients && ingredients.map((ing, index)=>{
+                                return(
+                                    <li key={ingredients}>
+                                        {ing}
+                                    </li>
+                                )
+                            })
+                        } */}
                 </ul>
              </div>
 
              <div className={styles.instCont}>
                 <h2>INSTRUCTIONS</h2>
                 <ol>
-                    <li>{instructions}</li>
+                    {
+                        instructions && instructions.map((ins, index)=>{
+                            return(
+                                <li key={instructions}>
+                                    {ins}
+                                </li>
+                            )
+                        })
+                    }
                 </ol>
              </div>
 
