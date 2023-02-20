@@ -287,6 +287,7 @@
   background-image: url('/assets/homeBg.png');
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
 }
 .mainRecipe {
   display: flex;
@@ -338,8 +339,8 @@ width: 100%;
   flex-direction: column;
   justify-content: center;
   background-color: var(--white-light);
-  width: 35em;
-  height: 30em;
+  max-width: 30em;
+  min-height: 25em;
 }
 
 .divTrans{
@@ -347,8 +348,8 @@ width: 100%;
   align-items: center;
   justify-content: center;
   background-color: var(--white-light);
-  width: 40em;
-  height: 35em;
+  width: 35em;
+  height: 30em;
 }
 
 .emojiMain{
@@ -363,8 +364,8 @@ width: 100%;
   justify-content: center;
   text-align: center;
   flex-direction: column;
-  padding-left: 2em;
-  padding-right: 2em;
+  padding-left: 2.5em;
+  padding-right: 2.5em;
 }
 
 .mainButton{
@@ -393,6 +394,8 @@ width: 100%;
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  padding-left: 1em;
+    padding-right: 1em;
 }
 
 .recCard{
@@ -410,6 +413,7 @@ width: 100%;
   box-shadow: 0px 4px 26px var(--shadow);
   border-top: 1em solid var(--blue);
   min-width: 350px;
+  max-width: 1050px;
   gap: 1em;
 }
 
@@ -417,7 +421,13 @@ width: 100%;
   display: flex;
   flex-direction: column;
   padding: 1em;
-  gap: 1em;
+  /* gap: 1em; */
   border: 3px dashed var(--canvas);
-  width: fit-content;
+  width: -webkit-fill-available;
+  margin: 1em;
+}
+
+.instCont{
+  padding-left: 2em;
+  padding-right: 2em;
 }

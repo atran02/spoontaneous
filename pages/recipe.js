@@ -4,11 +4,15 @@ import { Overpass } from '@next/font/google'
 import styles from '@/styles/Home.module.css'
 
 import foods from '../data/food_data.json'
+
 import NavBar from '@/comps/nav'
 import Footer from '@/comps/footer'
 import Button from '@/comps/button'
 import BtnCard from '@/comps/btnCard'
 import RecipeCard from '@/comps/recipeCard'
+
+import { useState, useEffect} from 'react'
+
 
 const overpass = Overpass({ 
   subsets: ['latin'],
@@ -16,6 +20,13 @@ const overpass = Overpass({
 })
 
 export default function Recipe() {
+  
+  const [recipe, setRecipe] = useState({});
+  
+  useEffect(()=>{
+    let recipeNum = foods[Math.floor(Math.random(foods.length - 1))];
+    setRecipe(recipeNum);
+  })
   return (
     <>
       <Head>
@@ -30,10 +41,10 @@ export default function Recipe() {
 
         <div className={styles.mainRecipe}>
             <div>
-              <RecipeCard foodImg={"/Food Images/italian-sausage-and-bread-stuffing-240559.jpg"} 
-                heading={'Miso-Butter Roast Chicken With Acorn Squash Panzanella'}
-                ingredients={'small'}
-                instructions={'apples are tender, about 15 minutes. Remove from oven, drain pickled onions, and toss to combine. Transfer to a serving dish.'}
+              <RecipeCard foodImg={`/Food Images/${recipe.Image_Name}.jpg`} 
+                heading={recipe.Title}
+                ingredients={recipe.Cleaned_Ingredients}
+                instructions={recipe.Instructions}
                 />
           </div>
         </div>

@@ -14,14 +14,14 @@ export default function RecipeCard(
              <h1>{heading}</h1>
              <Image src={foodImg} width={525} height={290}/>
              <div className={styles.ingSec}>
-                <h2>Ingredients</h2>
-                <ol>
+                <h2>INGREDIENTS</h2>
+                <ul>
                     <li>{ingredients}</li>
-                </ol>
+                </ul>
              </div>
 
-             <div>
-                <h2>Instructions</h2>
+             <div className={styles.instCont}>
+                <h2>INSTRUCTIONS</h2>
                 <ol>
                     <li>{instructions}</li>
                 </ol>
