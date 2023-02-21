@@ -10,9 +10,9 @@ export default function Footer()
     >
       {/* © */}
       Made By Angelyne {' '}
-      <span className={styles.logo}>
+      {/* <span className={styles.logo}>
         <Image src="/assets/8.png" alt="AngelyneTran" width={28} height={28} />
-      </span>
+      </span> */}
     </a>
   </div>
     
