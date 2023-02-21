@@ -11,7 +11,7 @@ export default function Footer()
       {/* © */}
       Made By Angelyne {' '}
       <span className={styles.logo}>
-        <Image src="/assets/womanCookEmoji.png" alt="AngelyneTran" width={28} height={28} />
+        <Image src="/assets/8.png" alt="AngelyneTran" width={28} height={28} />
       </span>
     </a>
   </div>
