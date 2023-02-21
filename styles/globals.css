@@ -84,3 +84,35 @@ ol, ul{
 li{
   padding: 0.5em;
 }
+
+
+#mainButton{
+  background: var(--blue-light);
+  border: 2px solid var(--blue);
+  color: var(--blue);
+  font-weight: 700;
+  font-size: 1.5rem;
+  padding: 0.5em;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  width: 11em;
+  margin: 1em;
+  cursor: pointer;
+}
+
+#mainButton:hover{
+  background: var(--blue);
+  color: var(--background-end-rgb);
+
+}
+
+#mainRecipe {
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
+  margin: auto;
+  padding: 3em;
+  min-height: 100vh;
+}

@@ -19,15 +19,7 @@ export default function RecipeCard(
              <div className={styles.ingSec}>
                 <h2>INGREDIENTS</h2>
                 <ul>
-                        {/* {
-                            ingredients && ingredients.map((ing, index)=>{
-                                return(
-                                    <li key={ingredients}>
-                                        {ing}
-                                    </li>
-                                )
-                            })
-                        } */}
+                    <li>{ingredients}</li>
                 </ul>
              </div>
 

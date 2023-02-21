@@ -40,17 +40,15 @@ export default function Recipe() {
       <main className={overpass.className}>
         <NavBar/>
 
-        <div className={styles.mainRecipe}>
-              <Button text={'NEW RECIPE'} link={'/recipe'}/>
+        <div id='mainRecipe'>
+              <Button text={'New Recipe'} link={'/recipe'}/>
             <div>
               <RecipeCard foodImg={`/Food Images/${recipe.Image_Name}.jpg`} 
                 heading={recipe.Title}
                 ingredients={recipe.Cleaned_Ingredients}
                 instructions={recipe.recipeInstruct}
                 />
-                {/* {
-                  recipe.recipeInstruct && recipe.recipeInstruct.map(())
-                } */}
+             
           </div>
         </div>
 

@@ -16,9 +16,16 @@ const overpass = Overpass({
 
 export default function Home() {
   const [emote, setEmote] = useState();
+  const [man, setMan] = useState();
+  const [woman, setWoman] = useState();
 
   useEffect(()=>{
-
+    let emojiM = Math.floor(Math.random()*(12-3)+3);
+    setMan(emojiM);
+  },[])
+  useEffect(()=>{
+    let emojiW = Math.floor(Math.random()*(12-3)+3);
+    setWoman(emojiW);
   },[])
 
   return (
@@ -41,7 +48,7 @@ export default function Home() {
                 <div className={styles.opaqueCont}>
                   <div className={styles.emojiMain}>
                     <div>
-                      <Image className={styles.emoji} src='/assets/manCookEmoji.png' width={28} height={28} onClick={()=>{
+                      <Image className={styles.emoji} src={`/assets/${man}.png`} width={28} height={28} onClick={()=>{
                         setEmote(1)
                       }}/>
                         {
@@ -51,7 +58,7 @@ export default function Home() {
                             height={28}
                           />
                         }
-                      <Image className={styles.emoji} src='/assets/womanCookEmoji.png' width={28} height={28} onClick={()=>{
+                      <Image className={styles.emoji} src={`/assets/${woman}.png`} width={28} height={28} onClick={()=>{
                         setEmote(2)
                       }}/>
                     </div>
@@ -59,8 +66,7 @@ export default function Home() {
                   <p className={styles.mainTxt}>
                     <span className={styles.txtCol}>Make every meal a surprise.</span>
                     <br/>
-                    Get started by clicking the button or one of the 
-                    randomly generated images for your next meal!
+                    Get started by clicking the button below to generate a random recipe from Epicurious!
                   </p>
                   <Button text={'Give Me A Recipe'} link={'/recipe'}/>
                 </div>
