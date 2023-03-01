@@ -43,24 +43,25 @@ export default function Home() {
             <div className={styles.divTrans}>
               
               <div className={styles.divOpaque}>
-                <Image className={styles.logoTxt} src='/assets/logoText.svg' width={371.5} height={53}/>
+                <Image className={styles.logoTxt} src='/assets/logoText.svg' width={371.5} height={53} unoptimized />
                 
                 <div className={styles.opaqueCont}>
                   <div className={styles.emojiMain}>
                     <div>
                       <Image className={styles.emoji} src={`/assets/${man}.png`} width={28} height={28} onClick={()=>{
                         setEmote(1)
-                      }}/>
+                      }} unoptimized />
                         {
                           emote && <Image
                             src={`/assets/${emote}.png`}
                             width={28}
                             height={28}
+                            unoptimized
                           />
                         }
                       <Image className={styles.emoji} src={`/assets/${woman}.png`} width={28} height={28} onClick={()=>{
                         setEmote(2)
-                      }}/>
+                      }} unoptimized />
                     </div>
                   </div>
                   <p className={styles.mainTxt}>

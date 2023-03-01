@@ -15,7 +15,7 @@ export default function RecipeCard(
     return <div className={styles.recCard}>
         <div className={styles.recCont}>
              <h1>{heading}</h1>
-             <Image src={foodImg} width={525} height={290}/>
+             <Image src={foodImg} width={525} height={290} unoptimized />
              <div className={styles.ingSec}>
                 <h2>INGREDIENTS</h2>
                 <ul>
